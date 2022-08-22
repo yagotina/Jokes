@@ -27,7 +27,7 @@ for(let key in formItems) {
 
     if(key === 'caterogy') 
         searchFormItem.innerHTML += '<ul class="caterogies" id="caterogies"></ul>';
-
+        
     if(key === 'search') 
         searchFormItem.innerHTML += '<input class="search-input" type="search" name="search-input" id="searchInput" placeholder="Free text search...">';
 
@@ -74,18 +74,18 @@ function renderJoke(data) {
     if(data.total) {
         data.result.forEach(joke => {
             let card = createCard(joke);
-            jokesContainer.append(card);
+            jokesContainer.prepend(card);
         });
     } else if(data.id) {
         let card = createCard(data);
-        jokesContainer.append(card);
+        jokesContainer.prepend(card);
     }
 };
 
 function renderFavJoke(joke) {
     if(!checkJokeinLocalStorage(joke)) addToLocalStorage(joke);
     let card = createCard(joke, true);
-    favouriteContainer.append(card);
+    favouriteContainer.prepend(card);
 };
 
 function removeFavJoke(joke) {
@@ -103,9 +103,11 @@ function addToLocalStorage(joke) {
 function removeFromLocalStorage(joke) {
     let jokes = localStorageArr();
     jokes.forEach((item, i) => {
-        if(item.id === joke.id) jokes.splice(i, 1);
+        if(item.id === joke.id) {
+            jokes.splice(i, 1);
+            localStorage.setItem('favouriteJokes', JSON.stringify(jokes)); 
+        }
     })
-    localStorage.setItem('favouriteJokes', JSON.stringify(jokes)); 
 };
 
 function checkJokeinLocalStorage(joke) {
@@ -116,7 +118,7 @@ function checkJokeinLocalStorage(joke) {
 function renderFavourites() {
     let jokes = localStorageArr();
     jokes.forEach(joke => renderFavJoke(joke));
-}
+};
 
 function createCard(data, isFavourite) {
     const isInLocalStorage = checkJokeinLocalStorage(data);
