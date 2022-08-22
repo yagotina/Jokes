@@ -1,0 +1,59 @@
+@import 'fonts';
+@import 'vars';
+
+@media (min-width: 835px) {
+    .container {
+        padding: 40px;
+    }
+    .jokes-card {
+        padding: 40px 40px 40px 100px;
+        &__icon {
+            top: 67px;
+            left: 40px;
+        }
+    }
+    .favourite {
+        padding: 90px 40px 40px 40px;
+        &__content {
+            width: 100%;
+        }
+        &::before {
+            width: calc(100% - 480px);
+        }
+    }
+    .favourite_show {
+        max-width: 480px;
+    }
+    .fav-title_checked {
+        top: 40px;
+        right: 40px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        display: flex;
+        padding-right: 480px;
+    }
+    .container {
+        padding: 80px;
+        width: 840px;
+        margin: 0 auto;
+    }
+    .favourite_show {
+        display: none;
+        &::before {
+            display: none;
+        }
+    }
+    .favourite {
+        display: block;
+        padding: 40px 40px 40px 40px;
+        &__title {
+            display: block;
+        }
+    }
+    .fav-title {
+        display: none;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Jokes</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <header class="header">
+          <a class="header__logo" href="index.html">MSI 2020</a>
+          <div class="fav-title">
+            <button class="fav-title__btn"></button>
+            <p class="fav-title__text">Favourite</p>
+          </div>
+        </header>
+        <main class="main">
+          <h1 class="main__title">Hey!</h1>
+          <p class="main__text">Let’s try to find a joke for you:</p>
+          <form class="search-form" id="searchForm">
+            <ul class="search-form__list"></ul>
+            <input class="search-form__btn" type="submit" value="Get a joke" />
+          </form>
+          <div class="jokes"></div>
+        </main>
+      </div>
+      <aside class="favourite">
+        <p class="favourite__title">Favourite</p>
+        <div class="favourite__content"></div>
+      </aside>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
