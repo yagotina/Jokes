@@ -293,12 +293,6 @@ body {
         height: 100%;
         background: rgba(0, 0, 0, 0.3);
     }
-    &__title {
-        display: none;
-        color: $info-color;
-        font: $fav-title-font;
-        margin-bottom: 20px;
-    }
     &__content {
         height: 100%;
         overflow-y: scroll;

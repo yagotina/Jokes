@@ -40,6 +40,14 @@
         width: 840px;
         margin: 0 auto;
     }
+    .fav-title {
+        position: fixed;
+        top: 40px;
+        right: 356px;
+        &__btn {
+            display: none;
+        }
+    }
     .favourite_show {
         display: none;
         &::before {
@@ -48,12 +56,5 @@
     }
     .favourite {
         display: block;
-        padding: 40px 40px 40px 40px;
-        &__title {
-            display: block;
-        }
-    }
-    .fav-title {
-        display: none;
     }
 }

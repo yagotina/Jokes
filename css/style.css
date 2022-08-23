@@ -310,12 +310,6 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
 }
-.favourite__title {
-  display: none;
-  color: #ABABAB;
-  font: 20px/28px "Roboto-Medium";
-  margin-bottom: 20px;
-}
 .favourite__content {
   height: 100%;
   overflow-y: scroll;
@@ -402,6 +396,15 @@ body {
     margin: 0 auto;
   }
 
+  .fav-title {
+    position: fixed;
+    top: 40px;
+    right: 356px;
+  }
+  .fav-title__btn {
+    display: none;
+  }
+
   .favourite_show {
     display: none;
   }
@@ -411,14 +414,6 @@ body {
 
   .favourite {
     display: block;
-    padding: 40px 40px 40px 40px;
-  }
-  .favourite__title {
-    display: block;
-  }
-
-  .fav-title {
-    display: none;
   }
 }
 
