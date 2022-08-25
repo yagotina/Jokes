@@ -12,4 +12,4 @@ Instructions
 (No need to use Back-end).
 
 * Favourite jokes should be visible in search result.
-** Mobile view
+* Mobile view
