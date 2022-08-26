@@ -295,6 +295,7 @@ body {
     }
     &__content {
         height: 100%;
+        border-radius: 10px;
         overflow-y: scroll;
     }
     &__card {

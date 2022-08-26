@@ -312,6 +312,7 @@ body {
 }
 .favourite__content {
   height: 100%;
+  border-radius: 10px;
   overflow-y: scroll;
 }
 .favourite__card {
